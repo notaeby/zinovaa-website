@@ -14,6 +14,8 @@ import leePfp from "../../assets/lee.png";
 import viktorpfp from "../../assets/viktor.png";
 import mirandaPfp from "../../assets/miranda.png";
 import hammadPfp from "../../assets/hammad.png";
+import homepage1Img from "../../assets/homepage1.png";
+import logoImg from "../../assets/zinovaa-white-01.png";
 /* HERO */
 export function Hero() {
   return (
@@ -205,7 +207,7 @@ export function OurStory() {
             <div className="absolute inset-0 opacity-30" style={{
               backgroundImage: "radial-gradient(circle at 30% 30%, var(--zn-accent), transparent 50%)",
             }} />
-            <img src="../src/assets/homepage1.png" alt="Our Story" className="absolute inset-0 h-full w-full object-cover opacity-70" />
+            <img src={homepage1Img} alt="Our Story" className="absolute inset-0 h-full w-full object-cover opacity-70" />
             <div className="absolute inset-6 rounded-2xl border border-white/10 p-6 flex flex-col justify-end">
               <span className="text-[var(--zn-accent)]" style={{ fontSize: "12px", letterSpacing: "0.1em" }}>EST. 2025</span>
               <p className="text-white mt-2" style={{ fontSize: "24px", fontWeight: 600 }}>A studio built around outcomes, not hours.</p>
@@ -546,7 +548,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-10 border-b border-white/10">
           <div className="flex items-center gap-3">
-            <img src="../src/assets/zinovaa-white-01.png" alt="Zinovaa Logo" className="h-12" />
+            <img src={logoImg} alt="Zinovaa Logo" className="h-12" />
           </div>
           <p className="text-white/60 max-w-md" style={{ fontSize: "14px" }}>
             Your end-to-end innovation partner. Strategy, design, and engineering — in one team.

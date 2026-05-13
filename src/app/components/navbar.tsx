@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ChevronDown, Menu, X, Cpu, Wifi, Globe, Smartphone, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "./ui-kit";
+import logoImg from "../../assets/zinovaa-white-01.png";
 
 const megaItems = [
   { icon: <Wifi size={20} />, title: "IoT", desc: "Connected device ecosystems.", href: "#/internet-of-things" },
@@ -34,7 +35,7 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-full max-w-[1280px] items-center justify-between px-6 lg:px-10">
         <a href="#" className="flex items-center gap-2">
-          <img src="../src/assets/zinovaa-white-01.png" alt="Zinovaa Logo" className="h-12" />
+          <img src={logoImg} alt="Zinovaa Logo" className="h-12" />
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">

@@ -6,6 +6,14 @@ import {
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { MascotCorner } from "../components/mascot";
+import alertpulse1 from "../../assets/alertpulse1.png";
+import alertpulse2 from "../../assets/alertpulse2.png";
+import alertpulse3 from "../../assets/alertpulse3.png";
+import alertpulse4 from "../../assets/alertpulse4.png";
+import nighebaan1 from "../../assets/nighebaan1.png";
+import nighebaan2 from "../../assets/nighebaan2.png";
+import nighebaan3 from "../../assets/nighebaan3.png";
+import nighebaan4 from "../../assets/nighebaan4.png";
 
 type Category = "IoT" | "Web Development" | "App Development";
 
@@ -34,7 +42,7 @@ const products: Product[] = [
   description: "An IoT-enabled wearable safety band for construction, warehouses, and industrial facilities.",
   icon: (
     <img
-      src="../src/assets/alertpulse1.png"  
+      src={alertpulse1}  
       alt="Alert Pulse Emergency Node"
       className="object-contain absolute w-[92%] h-[92%] rounded-[15px]"
     />
@@ -59,7 +67,7 @@ const products: Product[] = [
   slides: [
     mk(
       <img
-        src="../src/assets/alertpulse2.png"
+        src={alertpulse2}
         alt="Field Unit"
         className="object-contain absolute"
       />,
@@ -69,7 +77,7 @@ const products: Product[] = [
     ),
     mk(
       <img
-        src="../src/assets/alertpulse3.png"
+        src={alertpulse3}
         alt="Mesh Network"
         className="object-contain absolute"
       />,
@@ -79,7 +87,7 @@ const products: Product[] = [
     ),
     mk(
       <img
-        src="../src/assets/alertpulse4.png"
+        src={alertpulse4}
         alt="Control Console"
         className="object-contain absolute"
       />,
@@ -94,7 +102,7 @@ const products: Product[] = [
     category: "IoT",
     description: "A B2B IoT-based control platform used across industrial and high-risk operational environments.",
     icon: <img
-      src="../src/assets/nighebaan1.png"   // ← replace with your image
+      src={nighebaan1}
       alt="Nighebaan Node"
       className="object-contain absolute w-[92%] h-[92%] rounded-[15px]"
     />,
@@ -116,17 +124,17 @@ const products: Product[] = [
     ],
     slides: [
       mk(<img
-        src="../src/assets/nighebaan2.png"
+        src={nighebaan2}
         alt="Field Unit"
         className="object-contain absolute"
       />, "Detector Node", "from-[#5f1e1e] to-[var(--zn-primary)]", "#ff9f43"),
       mk(<img
-        src="../src/assets/nighebaan3.png"
+        src={nighebaan3}
         alt="Field Unit"
         className="object-contain absolute"
       />, "Mesh Topology", "from-[#3a1e5f] to-[var(--zn-primary)]", "#a29bfe"),
       mk(<img
-        src="../src/assets/nighebaan4.png"
+        src={nighebaan4}
         alt="Field Unit"
         className="object-contain absolute"
       />, "Facility Console", "from-[#1e5f4a] to-[var(--zn-primary)]", "#95e1d3"),
@@ -137,7 +145,7 @@ const products: Product[] = [
     category: "IoT",
     description: "A smart shoe sole system designed for corporate personnel and underground mining workers.",
     icon: <img
-      src="../src/assets/alertpulse1.png"
+      src={alertpulse1}
       alt="Alert Pulse Emergency Node"
       className="object-contain absolute"
     />,
