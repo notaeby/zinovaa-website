@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Qurova Demo';
+  src: url('./fonts/qurova-light.otf') format('opentype');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qurova Demo';
+  src: url('./fonts/qurova-regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qurova Demo';
+  src: url('./fonts/qurova-medium.otf') format('opentype');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qurova Demo';
+  src: url('./fonts/qurova-semibold.otf') format('opentype');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qurova Demo';
+  src: url('./fonts/qurova-bold.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+}
