@@ -179,9 +179,9 @@ export function ContactPage() {
             </div>
 
             <div className="flex flex-col gap-3">
-              <InfoRow icon={<Phone size={18} />} label="Phone" value="+1 (555) 012-3456" href="tel:+15550123456" />
-              <InfoRow icon={<Mail size={18} />} label="Email" value="hello@zinovaa.com" href="mailto:hello@zinovaa.com" />
-              <InfoRow icon={<MapPin size={18} />} label="Office" value="2400 Market St, San Francisco, CA 94114" />
+              <InfoRow icon={<Phone size={18} />} label="Phone" value="+92 339 0933 944" href="tel:+923390933944" />
+              <InfoRow icon={<Mail size={18} />} label="Email" value="contact@zinovaa.com" href="mailto:contact@zinovaa.com" />
+              <InfoRow icon={<MapPin size={18} />} label="Office" value="Bahria Town, Islamabad, Pakistan" />
             </div>
 
             <div>

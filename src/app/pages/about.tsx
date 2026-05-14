@@ -5,8 +5,8 @@ import {
 import { Button, SectionHeader, IconBadge } from "../components/ui-kit";
 import { ContactBand } from "../components/sections";
 import { MascotCorner } from "../components/mascot";
-import teamImg from "../../assets/team.png";
-import ceoImg from "../../assets/ceo-image.jpg";
+import storyimage from "../../assets/team.png";
+import ceoimage from "../../assets/ceo-image.jpg";
 
 function Hero() {
   return (
@@ -66,7 +66,7 @@ function OurStory() {
           backgroundImage: "linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }} />
-        <img src={teamImg} alt="The Zinovaa Team in our Cape Town office" className="h-full w-full object-cover" />
+        <img src={storyimage} alt="The Zinovaa Team in our Cape Town office" className="h-full w-full object-cover" />
         <div className="absolute bottom-0 left-0 right-0 p-6">
           <div className="rounded-xl border border-white/10 bg-black/30 p-5 backdrop-blur">
             <span className="text-[var(--zn-accent)]" style={{ fontSize: "12px", letterSpacing: "0.1em" }}>EST. 2025</span>
@@ -178,7 +178,7 @@ function CeoQuote() {
               backgroundImage: "radial-gradient(circle at 40% 30%, rgba(212,255,63,0.3), transparent 60%)",
             }} />
             <div className="absolute inset-0 grid place-items-center">
-              <img src={ceoImg} alt="Usama Rauf Khattak, CEO of Zinovaa" className="h-auto w-3/4 rounded-2xl border-4 border-white/20" />
+              <img src={ceoimage} alt="Usama Rauf Khattak, CEO of Zinovaa" className="h-auto w-3/4 rounded-2xl border-4 border-white/20" />
             </div>
           </div>
           <div className="absolute -bottom-4 -right-5 h-18 w-18 rounded-xl bg-[var(--zn-accent)]" />

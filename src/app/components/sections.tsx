@@ -14,8 +14,12 @@ import leePfp from "../../assets/lee.png";
 import viktorpfp from "../../assets/viktor.png";
 import mirandaPfp from "../../assets/miranda.png";
 import hammadPfp from "../../assets/hammad.png";
-import homepage1Img from "../../assets/homepage1.png";
-import logoImg from "../../assets/zinovaa-white-01.png";
+import storyimg from "../../assets/homepage1.png";
+import weblogo from "../../assets/zinovaa-white-01.png";
+
+
+
+
 /* HERO */
 export function Hero() {
   return (
@@ -207,7 +211,7 @@ export function OurStory() {
             <div className="absolute inset-0 opacity-30" style={{
               backgroundImage: "radial-gradient(circle at 30% 30%, var(--zn-accent), transparent 50%)",
             }} />
-            <img src={homepage1Img} alt="Our Story" className="absolute inset-0 h-full w-full object-cover opacity-70" />
+            <img src={storyimg} alt="Our Story" className="absolute inset-0 h-full w-full object-cover opacity-70" />
             <div className="absolute inset-6 rounded-2xl border border-white/10 p-6 flex flex-col justify-end">
               <span className="text-[var(--zn-accent)]" style={{ fontSize: "12px", letterSpacing: "0.1em" }}>EST. 2025</span>
               <p className="text-white mt-2" style={{ fontSize: "24px", fontWeight: 600 }}>A studio built around outcomes, not hours.</p>
@@ -548,7 +552,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-10 border-b border-white/10">
           <div className="flex items-center gap-3">
-            <img src={logoImg} alt="Zinovaa Logo" className="h-12" />
+            <img src={weblogo} alt="Zinovaa Logo" className="h-12" />
           </div>
           <p className="text-white/60 max-w-md" style={{ fontSize: "14px" }}>
             Your end-to-end innovation partner. Strategy, design, and engineering — in one team.
@@ -557,36 +561,56 @@ export function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-12">
           <div>
-            <p className="text-white/60" style={{ fontSize: "14px", lineHeight: 1.7 }}>
+            <p className="text-white/60" style={{ fontSize: "14px", lineHeight: 1.7, paddingBottom: "12px" }}>
               We partner with startups and enterprises to design, build, and scale products that move the needle.
             </p>
-            <a href="#" className="mt-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10">
-              <Instagram size={18} />
-            </a>
+            <iframe width="200" height="200" src="https://clutch.co/share/badges/2644299/35212?utm_source=clutch_top_company_badge&utm_medium=image_embed" title="Top Clutch Engineering Pakistan 2026"></iframe>
           </div>
           <div>
             <h4 className="text-white mb-5" style={{ fontSize: "14px", letterSpacing: "0.08em" }}>CONTACT INFO</h4>
             <ul className="flex flex-col gap-3 text-white/70" style={{ fontSize: "14px" }}>
-              <li className="flex items-center gap-3"><Phone size={16} /> +1 (555) 012-3456</li>
-              <li className="flex items-center gap-3"><Mail size={16} /> hello@zinovaa.com</li>
-              <li className="flex items-center gap-3"><MapPin size={16} /> 2400 Market St, San Francisco</li>
+              <li className="flex items-center gap-3"><Phone size={16} /> +92 339 0933 944</li>
+              <li className="flex items-center gap-3"><Mail size={16} /> contact@zinovaa.com</li>
+              <li className="flex items-center gap-3"><MapPin size={16} /> Bahria Town, Islamabad</li>
             </ul>
           </div>
           <div>
             <h4 className="text-white mb-5" style={{ fontSize: "14px", letterSpacing: "0.08em" }}>QUICK LINKS</h4>
-            <ul className="flex flex-col gap-3 text-white/70" style={{ fontSize: "14px" }}>
-              {["What We Do", "Our Products", "Information", "About"].map((l) => (
-                <li key={l}><a href="#" className="hover:text-[var(--zn-accent)]">{l}</a></li>
+                        <ul className="flex flex-col gap-3 text-white/70" style={{ fontSize: "14px" }}>
+              {[
+                { label: "What We Do", href: "#/our-services" },
+                { label: "Our Products", href: "#/our-products" },
+                { label: "Information", href: "#/information" },
+                { label: "About", href: "#/about" },
+                { label: "Blog", href: "#/blogs" },
+                { label: "Careers", href: "#/careers" },
+                { label: "Contact", href: "#/contact" },
+              ].map(({ label, href }) => (
+                <li key={label}><a href={href} className="transition hover:text-[var(--zn-accent)]">{label}</a></li>
               ))}
             </ul>
           </div>
           <div>
             <h4 className="text-white mb-5" style={{ fontSize: "14px", letterSpacing: "0.08em" }}>JOIN OUR NEWSLETTER</h4>
             <p className="text-white/60 mb-4" style={{ fontSize: "13px" }}>Monthly notes on design, IoT, and building things.</p>
-            <form onSubmit={(e) => e.preventDefault()} className="flex gap-2">
-              <input placeholder="you@email.com" className="flex-1 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-white placeholder:text-white/40 outline-none focus:border-[var(--zn-accent)]" style={{ fontSize: "14px" }} />
-              <Button>Subscribe</Button>
+            <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-2">
+              <input
+                placeholder="you@email.com"
+                type="email"
+                className="w-full rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-white placeholder:text-white/40 outline-none transition focus:border-[var(--zn-accent)] focus:bg-white/10"
+                style={{ fontSize: "14px" }}
+              />
+              <button
+                type="submit"
+                className="w-full rounded-full bg-[var(--zn-accent)] px-4 py-2.5 text-[var(--zn-primary)] transition hover:brightness-95 active:scale-[0.98]"
+                style={{ fontSize: "14px", fontWeight: 600 }}
+              >
+                Subscribe
+              </button>
             </form>
+            <a href="#" className="mt-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10">
+              <Instagram size={18} />
+            </a>
           </div>
         </div>
 

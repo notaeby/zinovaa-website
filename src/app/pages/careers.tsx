@@ -337,7 +337,7 @@ function HeroIconGrid() {
       >
         <span className="h-2 w-2 rounded-full bg-[var(--zn-accent)] animate-pulse" />
         <span className="text-white" style={{ fontSize: "13px", fontWeight: 600 }}>
-          <CountUp from={0} to={8} /> open positions
+          <CountUp value={1} suffix={"+"} /> open positions
         </span>
       </motion.div>
     </div>
@@ -346,10 +346,10 @@ function HeroIconGrid() {
 
 function Hero({ onViewRoles }: { onViewRoles: () => void }) {
   const stats = [
-    { value: 8, suffix: "+", label: "Open Roles" },
-    { value: 4, suffix: "", label: "Departments" },
-    { value: 100, suffix: "%", label: "Remote Friendly" },
-    { value: 5, suffix: "", label: "Countries" },
+    { value: 1, suffix: "+", label: "Open Roles" },
+    { value: 1, suffix: "", label: "Departments" },
+    { value: 50, suffix: "%", label: "Remote Friendly" },
+    { value: 1, suffix: "", label: "Countries" },
   ];
   return (
     <section className="relative overflow-hidden bg-[var(--zn-primary)] pt-[72px]">
@@ -447,7 +447,7 @@ function Hero({ onViewRoles }: { onViewRoles: () => void }) {
           {stats.map((s) => (
             <div key={s.label} className="flex flex-col gap-1">
               <span className="text-white" style={{ fontSize: "clamp(32px, 4.5vw, 48px)", fontWeight: 700, lineHeight: 1 }}>
-                <CountUp from={0} to={s.value} />{s.suffix}
+                <CountUp value={s.value} suffix={s.suffix} />
               </span>
               <span className="text-white/50" style={{ fontSize: "14px", letterSpacing: "0.06em" }}>{s.label.toUpperCase()}</span>
             </div>
@@ -605,7 +605,7 @@ function OpenPositions({ onOpen }: { onOpen: (job: Job) => void }) {
           <button
             className="inline-flex items-center gap-2 rounded-full border border-[var(--zn-border)] px-5 py-2.5 text-[var(--zn-primary)] transition hover:bg-[var(--zn-primary)] hover:text-white hover:border-[var(--zn-primary)]"
             style={{ fontSize: "14px" }}
-            onClick={() => window.location.href = "mailto:careers@zinovaa.com"}
+            onClick={() => window.location.href = "mailto:hr@zinovaa.com"}
           >
             Open Application <ArrowRight size={15} />
           </button>
@@ -832,7 +832,7 @@ function CTABand({ onViewRoles }: { onViewRoles: () => void }) {
               See Open Roles
             </button>
             <button
-              onClick={() => window.location.href = "mailto:careers@zinovaa.com"}
+              onClick={() => window.location.href = "mailto:hr@zinovaa.com"}
               className="inline-flex items-center gap-2 rounded-full border-2 border-[var(--zn-primary)] px-6 py-3 text-[var(--zn-primary)] transition hover:bg-[var(--zn-primary)] hover:text-white"
               style={{ fontSize: "15px", fontWeight: 600 }}
             >
@@ -840,11 +840,11 @@ function CTABand({ onViewRoles }: { onViewRoles: () => void }) {
             </button>
           </div>
           <a
-            href="mailto:careers@zinovaa.com"
+            href="mailto:hr@zinovaa.com"
             className="inline-flex items-center gap-2 text-[var(--zn-primary)]/60 transition hover:text-[var(--zn-primary)]"
             style={{ fontSize: "13px" }}
           >
-            <Mail size={14} /> careers@zinovaa.com
+            <Mail size={14} /> hr@zinovaa.com
           </a>
         </div>
       </section>

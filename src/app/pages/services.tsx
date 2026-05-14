@@ -3,35 +3,35 @@ import type { ReactNode } from "react";
 import { Button, SectionHeader, IconBadge } from "../components/ui-kit";
 import { ContactBand } from "../components/sections";
 import { MascotCorner } from "../components/mascot";
-import embedded1 from "../../assets/embedded1.png";
-import iot1 from "../../assets/iot1.png";
-import mobile1 from "../../assets/mobile1.png";
-import web1 from "../../assets/web1.png";
+import embeddedimage from "../../assets/embedded1.png";
+import iotimage from "../../assets/iot1.png";
+import mobileimage from "../../assets/mobile1.png";
+import webimage from "../../assets/web1.png";
 
 const services = [
   {
-    photo: <img src={embedded1} alt="Embedded Systems Icon" className="rounded-lg"/>,
+    photo: <img src={embeddedimage} alt="Embedded Systems Icon" className="rounded-lg"/>,
     icon: <Wifi size={22} />,
     title: "Embedded System Development",
     body: "We design firmware, drivers, and real-time systems that run reliably for years in the field — from low-power wearables to industrial controllers.",
     bullets: ["RTOS & bare-metal firmware", "PCB co-design with hardware teams", "OTA update pipelines"],
   },
   {
-    photo: <img src={iot1} alt="Internet of Things Icon" className="rounded-lg"/>,
+    photo: <img src={iotimage} alt="Internet of Things Icon" className="rounded-lg"/>,
     icon:   <Cpu size={22} />,
     title: "Internet of Things (IoT)",
     body: "End-to-end connected product development: edge devices, gateways, cloud ingestion, dashboards, and fleet management — built to scale from 10 to 10 million devices.",
     bullets: ["LoRaWAN, BLE, Wi-Fi, cellular", "AWS IoT / Azure IoT architectures", "Device lifecycle management"],
   },
   {
-    photo: <img src={mobile1} alt="Mobile App Development Icon" className="rounded-lg"/>,
+    photo: <img src={mobileimage} alt="Mobile App Development Icon" className="rounded-lg"/>,
     icon: <Smartphone size={22} />,
     title: "Mobile App Development",
     body: "Native iOS and Android, or cross-platform with React Native — we ship mobile experiences that feel at home on every device and scale with your user base.",
     bullets: ["iOS (Swift) & Android (Kotlin)", "React Native for cross-platform", "App Store & Play Store launch support"],
   },
   {
-    photo: <img src={web1} alt="Web Development Icon" className="rounded-lg"/>,
+    photo: <img src={webimage} alt="Web Development Icon" className="rounded-lg"/>,
     icon: <Globe size={22} />,
     title: "Web Development",
     body: "Modern web applications built on React, Next.js, and Node — performant, accessible, and architected for long-term maintainability.",
@@ -104,7 +104,9 @@ function Hero() {
           Four deeply integrated practices covering hardware, firmware, backend, and interface — everything a connected product needs to reach market and grow.
         </p>
         <div className="pt-2">
-          <Button>Get Services <ArrowRight size={16} /></Button>
+          <a href="#/contact" className="inline-block">
+            <Button>Get Services <ArrowRight size={16} /></Button>
+          </a>
         </div>
       </div>
     </section>

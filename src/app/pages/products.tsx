@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { MascotCorner } from "../components/mascot";
-import alertpulse1 from "../../assets/alertpulse1.png";
+import alertpulse1 from "../../assets/alertpulse1.png"; 
 import alertpulse2 from "../../assets/alertpulse2.png";
 import alertpulse3 from "../../assets/alertpulse3.png";
 import alertpulse4 from "../../assets/alertpulse4.png";
@@ -14,6 +14,7 @@ import nighebaan1 from "../../assets/nighebaan1.png";
 import nighebaan2 from "../../assets/nighebaan2.png";
 import nighebaan3 from "../../assets/nighebaan3.png";
 import nighebaan4 from "../../assets/nighebaan4.png";
+
 
 type Category = "IoT" | "Web Development" | "App Development";
 
@@ -140,39 +141,39 @@ const products: Product[] = [
       />, "Facility Console", "from-[#1e5f4a] to-[var(--zn-primary)]", "#95e1d3"),
     ],
   },
-  {
-    name: "Step Up",
-    category: "IoT",
-    description: "A smart shoe sole system designed for corporate personnel and underground mining workers.",
-    icon: <img
-      src={alertpulse1}
-      alt="Alert Pulse Emergency Node"
-      className="object-contain absolute"
-    />,
-    ratio: "4/5",
-    gradient: "from-[#1e3a5f] to-[var(--zn-primary)]",
-    accent: "#4ecdc4",
-    longDescription:
-      "An ultra-thin pressure-sensing insole that captures gait asymmetry and pairs to a mobile app via BLE. Used by physical therapists to quantify recovery after lower-limb surgery.",
-    highlights: [
-      "Tracks indoor/outdoor positioning",
-      "Centralized dashboards",
-      "Precise activity tracking",
-      "Automated safety alerts",
-    ],
-    meta: [
-      { label: "Sensors", value: "16 per sole" },
-      { label: "Battery", value: "7 days" },
-      { label: "Resolution", value: "100 Hz" },
-    ],
-    slides: [
-      mk(<Footprints size={72} />, "Hardware", "from-[#1e3a5f] to-[var(--zn-primary)]", "#4ecdc4"),
-      mk(<Activity size={72} />, "Gait Analytics", "from-[#5f3a1e] to-[var(--zn-primary)]", "#f9ca24"),
-      mk(<Shield size={72} />, "Clinician App", "from-[#1e5f4a] to-[var(--zn-primary)]", "#95e1d3"),
-    ],
-  },
   // {
-  //   name: "Santa Walkie App",
+  //   name: "Step Up",
+  //   category: "IoT",
+  //   description: "A smart shoe sole system designed for corporate personnel and underground mining workers.",
+  //   icon: <img
+  //     src={alertpulse1}
+  //     alt="Alert Pulse Emergency Node"
+  //     className="object-contain absolute"
+  //   />,
+  //   ratio: "4/5",
+  //   gradient: "from-[#1e3a5f] to-[var(--zn-primary)]",
+  //   accent: "#4ecdc4",
+  //   longDescription:
+  //     "An ultra-thin pressure-sensing insole that captures gait asymmetry and pairs to a mobile app via BLE. Used by physical therapists to quantify recovery after lower-limb surgery.",
+  //   highlights: [
+  //     "Tracks indoor/outdoor positioning",
+  //     "Centralized dashboards",
+  //     "Precise activity tracking",
+  //     "Automated safety alerts",
+  //   ],
+  //   meta: [
+  //     { label: "Sensors", value: "16 per sole" },
+  //     { label: "Battery", value: "7 days" },
+  //     { label: "Resolution", value: "100 Hz" },
+  //   ],
+  //   slides: [
+  //     mk(<Footprints size={72} />, "Hardware", "from-[#1e3a5f] to-[var(--zn-primary)]", "#4ecdc4"),
+  //     mk(<Activity size={72} />, "Gait Analytics", "from-[#5f3a1e] to-[var(--zn-primary)]", "#f9ca24"),
+  //     mk(<Shield size={72} />, "Clinician App", "from-[#1e5f4a] to-[var(--zn-primary)]", "#95e1d3"),
+  //   ],
+  // },
+  // {
+  //   name: "Audit Assist",
   //   category: "App Development",
   //   description: "Push-to-talk mobile radio for distributed field teams.",
   //   icon: <Radio size={44} />,
