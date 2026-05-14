@@ -78,10 +78,10 @@ export function Hero() {
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.95 }}
               className="flex flex-wrap gap-3"
             >
-              <a href="#/our-services" rel="noopener noreferrer">
+              <a href="/our-services" rel="noopener noreferrer">
               <Button>Explore More <ArrowRight size={16} /></Button>
               </a>
-              <a href="#/our-products" rel="noopener noreferrer">
+              <a href="/our-products" rel="noopener noreferrer">
               <Button variant="outline">See Our Work</Button>
               </a>
             </motion.div>
@@ -171,10 +171,10 @@ function HeroVisual() {
 
 /* CORE SERVICES */
 const services = [
-  { icon: <Wifi size={22} />, title: "IoT", description: "Sensor networks, edge gateways, and cloud integrations for connected products.", href: "#/internet-of-things" },
-  { icon: <Cpu size={22} />, title: "Embedded Systems", description: "Low-level firmware, PCB design, and real-time OS expertise.", href: "#/embedded-systems" },
-  { icon: <Globe size={22} />, title: "Web Development", description: "React, Next.js, and Node — fast, accessible, and scalable.", href: "#/web-development" },
-  { icon: <Smartphone size={22} />, title: "Mobile App Development", description: "Native and cross-platform apps your users will love.", href: "#/mobile-app-development" },
+  { icon: <Wifi size={22} />, title: "IoT", description: "Sensor networks, edge gateways, and cloud integrations for connected products.", href: "/internet-of-things" },
+  { icon: <Cpu size={22} />, title: "Embedded Systems", description: "Low-level firmware, PCB design, and real-time OS expertise.", href: "/embedded-systems" },
+  { icon: <Globe size={22} />, title: "Web Development", description: "React, Next.js, and Node — fast, accessible, and scalable.", href: "/web-development" },
+  { icon: <Smartphone size={22} />, title: "Mobile App Development", description: "Native and cross-platform apps your users will love.", href: "/mobile-app-development" },
   { icon: <Palette size={22} />, title: "Product Design & Development", description: "From concept sketches to production-ready industrial design.", href: "" },
   { icon: <Megaphone size={22} />, title: "Branding & Marketing", description: "Visual identity, websites, and growth campaigns that convert.", href: "" },
 ];
@@ -236,7 +236,7 @@ export function OurStory() {
             ))}
           </ul>
           <div className="mt-8">
-            <a href="#/about" rel="noopener noreferrer">
+            <a href="/about" rel="noopener noreferrer">
             <Button variant="ghost">Learn More <ArrowRight size={16} /></Button>
             </a>
           </div>
@@ -518,11 +518,11 @@ export function BlogPosts() {
     <section className="mx-auto max-w-[1280px] px-6 lg:px-10 py-20 lg:py-28">
       <Reveal className="flex items-end justify-between flex-wrap gap-6">
         <SectionHeader eyebrow="Journal" title="From the Zinovaa blog" subtitle="Deep dives, case studies, and occasional hot takes." />
-        <a href="#/blogs"><Button variant="ghost">View All Posts <ArrowRight size={16} /></Button></a>
+        <a href="/blogs"><Button variant="ghost">View All Posts <ArrowRight size={16} /></Button></a>
       </Reveal>
       <Stagger className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6" step={0.1}>
         {posts.map((p) => (
-          <a key={p.slug} href={`#/blog/${p.slug}`} className="zn-card-3d group flex flex-col overflow-hidden rounded-2xl border border-[var(--zn-border)] bg-white">
+          <a key={p.slug} href={`/blog/${p.slug}`} className="zn-card-3d group flex flex-col overflow-hidden rounded-2xl border border-[var(--zn-border)] bg-white">
             <div className="relative aspect-[16/9] overflow-hidden bg-[var(--zn-primary)]">
               <img src={p.image} alt={p.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
               <div aria-hidden className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(3,2,19,0.3) 0%, transparent 60%)" }} />
@@ -578,13 +578,13 @@ export function Footer() {
             <h4 className="text-white mb-5" style={{ fontSize: "14px", letterSpacing: "0.08em" }}>QUICK LINKS</h4>
                         <ul className="flex flex-col gap-3 text-white/70" style={{ fontSize: "14px" }}>
               {[
-                { label: "What We Do", href: "#/our-services" },
-                { label: "Our Products", href: "#/our-products" },
-                { label: "Information", href: "#/information" },
-                { label: "About", href: "#/about" },
-                { label: "Blog", href: "#/blogs" },
-                { label: "Careers", href: "#/careers" },
-                { label: "Contact", href: "#/contact" },
+                { label: "What We Do", href: "/our-services" },
+                { label: "Our Products", href: "/our-products" },
+                { label: "Information", href: "/information" },
+                { label: "About", href: "/about" },
+                { label: "Blog", href: "/blogs" },
+                { label: "Careers", href: "/careers" },
+                { label: "Contact", href: "/contact" },
               ].map(({ label, href }) => (
                 <li key={label}><a href={href} className="transition hover:text-[var(--zn-accent)]">{label}</a></li>
               ))}

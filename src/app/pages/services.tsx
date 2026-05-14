@@ -104,7 +104,7 @@ function Hero() {
           Four deeply integrated practices covering hardware, firmware, backend, and interface — everything a connected product needs to reach market and grow.
         </p>
         <div className="pt-2">
-          <a href="#/contact" className="inline-block">
+          <a href="/contact" className="inline-block">
             <Button>Get Services <ArrowRight size={16} /></Button>
           </a>
         </div>

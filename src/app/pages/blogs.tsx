@@ -108,7 +108,7 @@ function Featured() {
 
 function BlogCard({ p }: { p: (typeof posts)[number] }) {
   return (
-    <a href={`#/blog/${p.slug}`} className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--zn-border)] bg-white transition hover:-translate-y-1 hover:shadow-[0_16px_48px_-16px_rgba(3,2,19,0.15)]">
+    <a href={`/blog/${p.slug}`} className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--zn-border)] bg-white transition hover:-translate-y-1 hover:shadow-[0_16px_48px_-16px_rgba(3,2,19,0.15)]">
       <div className="relative aspect-[16/9] overflow-hidden bg-[var(--zn-primary)]">
         <img src={p.image} alt={p.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
         <div aria-hidden className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(3,2,19,0.3) 0%, transparent 60%)" }} />

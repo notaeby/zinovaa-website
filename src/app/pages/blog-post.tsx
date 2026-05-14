@@ -228,7 +228,7 @@ const categories = [
 
 function MiniCard({ p }: { p: Post }) {
   return (
-    <a href={`#/blog/${p.slug}`} className="group flex gap-3 rounded-xl p-3 transition hover:bg-[var(--zn-surface)]">
+    <a href={`/blog/${p.slug}`} className="group flex gap-3 rounded-xl p-3 transition hover:bg-[var(--zn-surface)]">
       <div className="relative h-16 w-20 flex-shrink-0 overflow-hidden rounded-lg">
         <img
           src={p.image}
@@ -311,9 +311,9 @@ export function BlogPostPage({ slug }: { slug: string }) {
         />
         <div className="relative mx-auto max-w-[1040px] px-6 lg:px-10 py-16 lg:py-20">
           <nav className="flex items-center gap-2 text-white/60" style={{ fontSize: "13px" }}>
-            <a href="#/" className="hover:text-white">Home</a>
+            <a href="/" className="hover:text-white">Home</a>
             <ChevronRight size={14} />
-            <a href="#/blogs" className="hover:text-white">Blog</a>
+            <a href="/blogs" className="hover:text-white">Blog</a>
             <ChevronRight size={14} />
             <span className="text-[var(--zn-accent)] truncate max-w-[320px]">{post.title}</span>
           </nav>
@@ -392,7 +392,7 @@ export function BlogPostPage({ slug }: { slug: string }) {
                 {categories.map((c) => (
                   <a
                     key={c.name}
-                    href="#/blogs"
+                    href="/blogs"
                     className="inline-flex items-center gap-2 rounded-full border border-[var(--zn-border)] px-3 py-1.5 text-[var(--zn-primary)] transition hover:border-[var(--zn-primary)] hover:bg-[var(--zn-surface-alt)]"
                     style={{ fontSize: "13px" }}
                   >
@@ -408,7 +408,7 @@ export function BlogPostPage({ slug }: { slug: string }) {
               <p className="mt-2 text-white/70" style={{ fontSize: "13px", lineHeight: 1.6 }}>
                 We'd love to chat. Most projects start with a scoped discovery call.
               </p>
-              <a href="#/contact" className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--zn-accent)] px-4 py-2 text-[var(--zn-primary)]" style={{ fontSize: "13px", fontWeight: 500 }}>
+              <a href="/contact" className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--zn-accent)] px-4 py-2 text-[var(--zn-primary)]" style={{ fontSize: "13px", fontWeight: 500 }}>
                 Start a Project <ArrowRight size={14} />
               </a>
             </div>

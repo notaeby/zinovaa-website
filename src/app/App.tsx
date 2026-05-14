@@ -34,16 +34,36 @@ function HomePage() {
 
 export default function App() {
   const [route, setRoute] = useState<string>(
-    typeof window !== "undefined" ? window.location.hash.replace("#", "") || "/" : "/"
+    typeof window !== "undefined" ? window.location.pathname || "/" : "/"
   );
 
   useEffect(() => {
-    const onHash = () => {
-      setRoute(window.location.hash.replace("#", "") || "/");
+    // Back/forward navigation
+    const onPop = () => {
+      setRoute(window.location.pathname || "/");
       window.scrollTo({ top: 0 });
     };
-    window.addEventListener("hashchange", onHash);
-    return () => window.removeEventListener("hashchange", onHash);
+    window.addEventListener("popstate", onPop);
+
+    // Intercept all internal <a> clicks — no full page reloads
+    const onClick = (e: MouseEvent) => {
+      const anchor = (e.target as Element).closest("a");
+      if (!anchor) return;
+      const href = anchor.getAttribute("href");
+      if (!href || !href.startsWith("/") || href.startsWith("//")) return;
+      e.preventDefault();
+      if (href !== window.location.pathname) {
+        window.history.pushState({}, "", href);
+        setRoute(href);
+        window.scrollTo({ top: 0 });
+      }
+    };
+    document.addEventListener("click", onClick);
+
+    return () => {
+      window.removeEventListener("popstate", onPop);
+      document.removeEventListener("click", onClick);
+    };
   }, []);
 
   const renderRoute = () => {
@@ -170,7 +190,7 @@ export default function App() {
         }
       `}</style>
       <Navbar />
-      <main className="zn-perspective">
+      <main className="zn-perspective relative">
         <PageTransition routeKey={route}>{renderRoute()}</PageTransition>
       </main>
       <Footer />

@@ -151,9 +151,9 @@ function Hero({ c }: { c: ServiceContent }) {
       />
       <div className="relative mx-auto max-w-[1280px] px-6 lg:px-10 py-16 lg:py-24">
         <nav className="flex items-center gap-2 text-white/60" style={{ fontSize: "13px" }}>
-          <a href="#/" className="hover:text-white">Home</a>
+          <a href="/" className="hover:text-white">Home</a>
           <ChevronRight size={14} />
-          <a href="#/our-services" className="hover:text-white">What We Do</a>
+          <a href="/our-services" className="hover:text-white">What We Do</a>
           <ChevronRight size={14} />
           <span className="text-[var(--zn-accent)]">{c.breadcrumb}</span>
         </nav>

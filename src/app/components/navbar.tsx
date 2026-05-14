@@ -5,10 +5,10 @@ import { Button } from "./ui-kit";
 import weblogo from "../../assets/zinovaa-white-01.png";
 
 const megaItems = [
-  { icon: <Wifi size={20} />, title: "IoT", desc: "Connected device ecosystems.", href: "#/internet-of-things" },
-  { icon: <Cpu size={20} />, title: "Embedded Systems", desc: "Firmware & hardware engineering.", href: "#/embedded-systems" },
-  { icon: <Globe size={20} />, title: "Web Development", desc: "Performant, scalable web apps.", href: "#/web-development" },
-  { icon: <Smartphone size={20} />, title: "Mobile Apps", desc: "Native & cross-platform apps.", href: "#/mobile-app-development" },
+  { icon: <Wifi size={20} />, title: "IoT", desc: "Connected device ecosystems.", href: "/internet-of-things" },
+  { icon: <Cpu size={20} />, title: "Embedded Systems", desc: "Firmware & hardware engineering.", href: "/embedded-systems" },
+  { icon: <Globe size={20} />, title: "Web Development", desc: "Performant, scalable web apps.", href: "/web-development" },
+  { icon: <Smartphone size={20} />, title: "Mobile Apps", desc: "Native & cross-platform apps.", href: "/mobile-app-development" },
 ];
 
 export function Navbar() {
@@ -39,24 +39,24 @@ export function Navbar() {
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
-          <a href="#/" className="zn-underline text-white/80 hover:text-white transition">Home</a>
+          <a href="/" className="zn-underline text-white/80 hover:text-white transition">Home</a>
           <div
             onMouseEnter={() => setMega(true)}
             onMouseLeave={() => setMega(false)}
             className="relative"
           >
-            <a href="#/our-services" className="zn-underline flex items-center gap-1 text-white/80 hover:text-white transition">
+            <a href="/our-services" className="zn-underline flex items-center gap-1 text-white/80 hover:text-white transition">
               What We Do <ChevronDown size={16} className={`transition ${mega ? "rotate-180" : ""}`} />
             </a>
           </div>
-          <a href="#/our-products" className="zn-underline text-white/80 hover:text-white transition">Our Products</a>
-          <a href="#/information" className="zn-underline text-white/80 hover:text-white transition">Information</a>
-          <a href="#/about" className="zn-underline text-white/80 hover:text-white transition">About</a>
-          <a href="#/careers" className="zn-underline text-white/80 hover:text-white transition">Careers</a>
+          <a href="/our-products" className="zn-underline text-white/80 hover:text-white transition">Our Products</a>
+          <a href="/information" className="zn-underline text-white/80 hover:text-white transition">Information</a>
+          <a href="/about" className="zn-underline text-white/80 hover:text-white transition">About</a>
+          <a href="/careers" className="zn-underline text-white/80 hover:text-white transition">Careers</a>
         </nav>
 
         <div className="hidden lg:block">
-          <a href="#/contact"><Button>Contact Us</Button></a>
+          <a href="/contact"><Button>Contact Us</Button></a>
         </div>
 
         <button className="lg:hidden text-white" onClick={() => setDrawer(true)} aria-label="Open menu">
@@ -120,7 +120,7 @@ export function Navbar() {
             </a>
           ))}
           <div className="pt-6">
-            <a href="#/contact" onClick={() => setDrawer(false)}>
+            <a href="/contact" onClick={() => setDrawer(false)}>
               <Button className="w-full">Contact Us</Button>
             </a>
           </div>

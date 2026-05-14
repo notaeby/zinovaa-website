@@ -426,7 +426,7 @@ function Hero({ onViewRoles }: { onViewRoles: () => void }) {
             >
               <Button onClick={onViewRoles}>View Open Roles <ArrowRight size={16} /></Button>
               <Button variant="outline">
-                <a href="#/about" className="flex items-center gap-2">Learn About Us</a>
+                <a href="/about" className="flex items-center gap-2">Learn About Us</a>
               </Button>
             </motion.div>
           </div>
